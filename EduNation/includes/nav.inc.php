@@ -13,64 +13,55 @@
   $page_title = "";
 
   // Flag variables to know which Page we are at
-  $home = true; 
+  $home = false; 
   $login = false; 
   $bookmark = false; 
   $changePass = false; 
   $category = false; 
   $search = false;
-  
+  $about = false;
+
   // Strpos returns the position of the search string in the main string or returns 0 (false)
   // Checking if the page is Home Page
-  if(strpos($uri,"index.php") != false){
+  if(strpos($uri,"index.php") !== false) {
     $page_title = " Home";
+    $home = true;
   }
 
   // Checking if the page is Login Page
-  if(strpos($uri,"login.php") != false){
+  if(strpos($uri,"login.php") !== false) {
     $page_title = " Login";
-    $home = false;
     $login = true;
   }
   
   // Checking if the page is Bookmarks Page
-  if(strpos($uri,"bookmarks.php") != false){
+  if(strpos($uri,"bookmarks.php") !== false) {
     $page_title = " Bookmarks";
-    $home = false;
     $bookmark = true;
   }
   
-  // Checking if the page is Bookmarks Page
-  if(strpos($uri,"user-change-password.php") != false){
+  // Checking if the page is Change Password Page
+  if(strpos($uri,"user-change-password.php") !== false) {
     $page_title = " Change Password";
-    $home = false;
     $changePass = true;
   }
   
-  // Checking if the page is Home Page
-  if(strpos($uri,"categories.php") != false){
+  // Checking if the page is Categories Page
+  if(strpos($uri,"categories.php") !== false) {
     $page_title = " Categories";
-    $home = false;
     $category = true;
   }
   
   // Checking if the page is Search Page
-  if(strpos($uri,"search.php") != false){
+  if(strpos($uri,"search.php") !== false) {
     $page_title = " Search";
-    $home = false;
     $search = true;
   }
   
-  // Checking if the page is Articles Page
-  if(strpos($uri,"articles.php") != false){
-    $home = false;
-    $page_title = "All Article";
-  }
-
-  // Checking if the page is New Article Page
-  if(strpos($uri,"news.php") != false){
-    $home = false;
-    $page_title = "News Article";
+  // Checking if the page is About Us Page
+  if(strpos($uri,"about.php") !== false) {
+    $page_title = " About Us";
+    $about = true;
   }
 ?>
 <!DOCTYPE html>
@@ -119,49 +110,36 @@
     </label>
     <input type="checkbox" id="btn" class="input" />
     <ul class="ul">
-      <!-- We ECHO class current based upon the boolean variables used in above PHP Snippet -->
+      <!-- Home -->
       <li><a href="./index.php" <?php if($home) echo 'class="current"' ?>>Home</a></li>
+      
+      <!-- About Us -->
+      <li><a href="./about.php" <?php if($about) echo 'class="current"' ?>>About Us</a></li>
+
+      <!-- Categories -->
       <li>
         <label for="btn-1" class="show">Categories +</label>
         <a href="./categories.php" <?php if($category) echo 'class="current"' ?>>Categories</a>
         <input type="checkbox" id="btn-1" class="input" />
         <ul>
           <?php
-
-            // Category Query to fetch random 4 categories
-            $categoryQuery= " SELECT  category_id, category_name
-                              FROM category 
-                              ORDER BY RAND() LIMIT 4";
-
-            // Running Category Query
-            $result = mysqli_query($con,$categoryQuery);
-
-            // Returns the number of rows from the result retrieved.
-            $row = mysqli_num_rows($result);
-            
-            // If query has any result (records) => If there are categories
-            if($row > 0) {
-              
-              // Fetching the data of particular record as an Associative Array
+            $categoryQuery = "SELECT category_id, category_name FROM category ORDER BY RAND() LIMIT 4";
+            $result = mysqli_query($con, $categoryQuery);
+            if(mysqli_num_rows($result) > 0) {
               while($data = mysqli_fetch_assoc($result)) {
-                
-                // Storing the category data in variables
-                $category_id = $data['category_id'];
-                $category_name = $data['category_name'];
-                ?>
-          <li><a href="articles.php?id=<?php echo $category_id ?>"><?php echo $category_name ?></a></li>
-          <?php  
+                echo '<li><a href="articles.php?id=' . $data['category_id'] . '">' . $data['category_name'] . '</a></li>';
               }
             }
           ?>
           <li><a href="./categories.php">More +</a></li>
         </ul>
       </li>
+
+      <!-- Bookmarks -->
       <li><a href="./bookmarks.php" <?php if($bookmark) echo 'class="current"' ?>>Bookmarks</a></li>
-      <?php
-        if(isset($_SESSION['USER_NAME'])) {
-        }else {
-      ?>
+
+      <!-- Login/Settings -->
+      <?php if(!isset($_SESSION['USER_NAME'])) { ?>
       <li>
         <label for="btn-2" class="show">Login +</label>
         <a href="./user-login.php" <?php if($login) echo 'class="current"' ?>>Login</a>
@@ -171,38 +149,27 @@
           <li><a href="./author-login.php">Author</a></li>
         </ul>
       </li>
-      <?php
-        }
-      ?>
+      <?php } else { ?>
+      <li>
+        <label for="btn-2" class="show">Settings</label>
+        <a href="#" <?php if($changePass) echo 'class="current"' ?>>Settings</a>
+        <input type="checkbox" id="btn-2" class="input" />
+        <ul>
+          <li><a href="./user-change-password.php">Change Password</a></li>
+          <li><a href="./logout.php">Logout</a></li>
+        </ul>
+      </li>
+      <li><a disabled>Hello <?php echo $_SESSION['USER_NAME']; ?> !</a></li>
+      <?php } ?>
+
+      <!-- Search -->
       <li>
         <a href="./search.php" <?php if($search) echo 'class="current"' ?>>
           <span>Search</span>
           <i id="search-icon" class="fas fa-search"></i>
         </a>
       </li>
-      <?php
-
-        // If user is logged in
-        if(isset($_SESSION['USER_NAME'])) {
-          echo '
-          <li>
-            <label for="btn-2" class="show">Settings</label>
-            <a href="#"';
-            
-            if($changePass){
-              echo 'class="current" '; 
-            }
-          echo
-            '>Settings</a>
-            <input type="checkbox" id="btn-2" class="input" />
-            <ul>
-              <li><a href="./user-change-password.php">Change Password</a></li>
-              <li><a href="./logout.php">Logout</a></li>
-              </ul>
-          </li>
-          ';
-          echo '<li><a disabled>Hello '.$_SESSION["USER_NAME"].' !</a></li>';
-        }
-      ?>
     </ul>
   </nav>
+</body>
+</html>
