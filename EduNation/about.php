@@ -39,18 +39,6 @@
         <!-- Team Member 2 -->
         <div class="team-member">
             <div class="member-image">
-                <img src="./assets/images/vinit.jpg" alt="Team Member 2">
-            </div>
-            <div class="member-info">
-                <h2>Vinit yadav</h2>
-                <p>Backend developer</p>
-                <a href="https://linkedin.com/in/janesmith" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            </div>
-        </div>
-
-        <!-- Team Member 3 -->
-        <div class="team-member">
-            <div class="member-image">
                 <img src="./assets/images/prithvi.jpg" alt="Team Member 3">
             </div>
             <div class="member-info">
@@ -60,14 +48,26 @@
             </div>
         </div>
 
+        <!-- Team Member 3 -->
+        <div class="team-member">
+            <div class="member-image">
+                <img src="./assets/images/vinit1.png" alt="Team Member 2">
+            </div>
+            <div class="member-info">
+                <h2>Vinit yadav</h2>
+                <p>Backend developer</p>
+                <a href="https://linkedin.com/in/janesmith" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </div>
+
         <!-- Team Member 4 -->
         <div class="team-member">
             <div class="member-image">
-                <img src="./assets/images/kg.jpg" alt="Team Member 4">
+                <img src="./assets/images/vishesh2.png" alt="Team Member 4">
             </div>
             <div class="member-info">
-                <h2>KG Srinivas</h2>
-                <p>dean academic</p>
+                <h2>Vishesh D</h2>
+                <p>Backend Developer</p>
                 <a href="https://linkedin.com/in/michaellee" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
             </div>
         </div>
@@ -75,11 +75,11 @@
         <!-- Team Member 5 -->
         <div class="team-member">
             <div class="member-image">
-                <img src="./assets/images/pranjali.jpg" alt="Team Member 5">
+                <img src="./assets/images/pranjali1.png" alt="Team Member 5">
             </div>
             <div class="member-info">
-                <h2>Sophia Green</h2>
-                <p>Designer</p>
+                <h2>Pranjali </h2>
+                <p>Documentation</p>
                 <a href="https://linkedin.com/in/sophiagreen" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
             </div>
         </div>

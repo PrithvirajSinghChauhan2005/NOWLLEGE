@@ -39,15 +39,13 @@
 }
 
 .category-list {
-  background-color: rgb(255, 0, 0); 
-  background-image: url(dow.jpg);
+  background-color: rgb(39, 39, 53); 
   background-size: cover; 
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents repeating the image */
 }
 .navbar {
   background-color: beige; 
-  background-image: url(dow.jpg);
   background-size: cover; 
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents repeating the image */

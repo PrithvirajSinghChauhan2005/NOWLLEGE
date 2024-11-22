@@ -1,9 +1,6 @@
 /* TOP NAV BUTTON */
 body {
-  background-color: rgb(250, 248, 250); /* Use a variable */
-  background-color: #f0f8ff; /* Or a specific color code */
-  background-image:url(edited_creative-abstract-mixed-coral-color-painting-with-marble-effect-panorama.jpg);
-
+  background-color: rgb(255, 255, 255); /* Use a variable */
 }
 h1 {
   font-size: 2rem;
@@ -35,13 +32,11 @@ h1 {
 
 /* NAVBAR DEKSTOP */
 .navbar {
-  background: rgb(154, 74, 74);
+  background: rgba(13, 0, 255, 0);
   font-family: var(--ff-nunito);
   position: sticky;
   z-index: 12;
   top: 0;
-  box-shadow: 0 4px 10px rgba(238, 10, 10, 0.426);
-  background-image: url(nab_bar_background\ \(6\)\ \(1\).png);
   background-size: cover; 
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents repeating the image */
@@ -141,6 +136,7 @@ h1 {
   position: relative;
   width: 100%;
   height: 450px;
+  margin-top: -75px; 
   background: #1d212b;
 }
 
