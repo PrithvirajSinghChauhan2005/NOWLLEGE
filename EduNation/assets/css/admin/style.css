@@ -1,10 +1,10 @@
 ::selection {
-  background: var(--primary-color);
-  color: #ffffff;
+  background:#0037ff;
+  color: #ff0000;
 }
 
 body {
-  background: var(--light-color);
+  background-color: aqua;
 }
 .btn-box {
   padding: 2rem;
@@ -86,7 +86,7 @@ body {
 
 /* Header */
 #header {
-  background: #333333;
+  background: #ff0000;
   color: #ffffff;
   padding-bottom: 10px;
   margin-bottom: 15px;
