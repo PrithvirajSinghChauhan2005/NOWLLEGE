@@ -33,9 +33,9 @@ h1 {
 /* NAVBAR DEKSTOP */
 .navbar {
   transition: all 0.3s ease; /* Smooth transitions */
-  background: rgba(255, 255, 255, 0.2); /* Transparent white background */
+  background: rgba(0, 0, 0, 0.2); /* Transparent white background */
   backdrop-filter: blur(10px); /* Blur effect for the glassy look */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Shadow for depth */
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* Optional: Shadow for depth */
   font-family: var(--ff-nunito);
   position: sticky;
   z-index: 12;
@@ -43,7 +43,45 @@ h1 {
   background-size: cover; 
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents repeating the image */
+}/* Target the button in the slider */
+.slider .category-button {
+  display: inline-block; /* Allows padding to be applied effectively */
+  margin-top: 20px; /* Moves the button downward */
+  padding: 10px 20px; /* Adds internal spacing (top-bottom, left-right) */
+  background-color: #ff0000; /* Optional: Set the background color (red in this case) */
+  color: #fff; /* Set text color to white */
+  border: none; /* Remove borders */
+  border-radius: 5px; /* Optional: Adds rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  font-size: 16px; /* Adjust the font size for better readability */
+  text-align: center; /* Center the text inside the button */
+  text-decoration: none; /* Remove underline if it's a link styled as a button */
 }
+.tag {
+  display: inline-block; /* Ensures proper padding behavior */
+  margin-top: 20px; /* Moves the tag downward */
+  padding: 10px 15px; /* Adds internal spacing (top-bottom, left-right) */
+  background-color: #6a1b9a; /* Purple background */
+  color: #fff; /* White text */
+  border-radius: 5px; /* Optional: Rounded corners */
+  font-size: 14px; /* Adjust font size for better readability */
+  cursor: pointer; /* Makes the tag clickable (optional) */
+  text-align: center; /* Center text inside the tag */
+}
+
+/* Hover effect */
+.tag:hover {
+  background-color: #4a148c; /* Darker purple on hover */
+  color: #fff; /* Optional: Ensure text remains white on hover */
+  transform: translateY(-3px); /* Adds a subtle lift effect */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+}
+
+/* Add hover effect (optional) */
+.slider .category-button:hover {
+  background-color: #cc0000; /* Darker red on hover */
+}
+
 .navbar:after {
   content: "";
   clear: both;
@@ -93,6 +131,11 @@ h1 {
 .navbar ul li a.current #search-icon {
   color: rgb(0, 0, 0);
 }
+
+
+
+
+
 /*categaory ka dropdown menu ka formatting start*/
 .navbar ul ul {
   position: absolute;
