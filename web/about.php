@@ -24,7 +24,7 @@
     </header>
 
     <section class="team-container">
-        <!-- Team Member 2 -->
+        <!-- Team Member 1 -->
         <div class="team-member">
             <div class="member-image">
                 <img src="./assets/images/people/prithvi.jpg" alt="Team Member 3">
@@ -36,7 +36,7 @@
             </div>
         </div>
 
-        <!-- Team Member 1 -->
+        <!-- Team Member 2 -->
         <div class="team-member">
             <div class="member-image">
                 <img src="./assets/images/people/praveen.jpg" alt="Team Member 1">
@@ -56,19 +56,19 @@
             <div class="member-info">
                 <h2>Vinit yadav</h2>
                 <p>Database Management</p>
-                <a href="https://linkedin.com/in/janesmith" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://www.linkedin.com/in/vinit-yadav-a3199831a" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
             </div>
         </div>
 
         <!-- Team Member 4 -->
         <div class="team-member">
             <div class="member-image">
-                <img src="./assets/images/people/vishesh2.png" alt="Team Member 4">
+                <img src="./assets/images/people/vishesh.jpg" alt="Team Member 4">
             </div>
             <div class="member-info">
                 <h2>Vishesh D</h2>
                 <p>Backend Developer</p>
-                <a href="https://linkedin.com/in/michaellee" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://www.linkedin.com/in/vishesh-devaguptapu-110ba1324/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
             </div>
         </div>
 
