@@ -1,9 +1,6 @@
 <?php
-  // Fetching all the Navbar Data
   require('./includes/nav.inc.php');
-  
-  // Fetching all the Slider Data
-  require('./includes/slider.inc.php');
+
 ?>
 
 <!-- Category List Container -->
@@ -12,7 +9,7 @@
     <h2 class="headings">Categories</h2>
     <div class="card-container">
       <?php
-        // SQL query to fetch all categories in lexicographic order
+        // SQL query to fetch all categories
         $sql = "SELECT * FROM category ORDER BY category_name ASC";
 
         // Prepare the statement
@@ -42,7 +39,6 @@
                 echo "No categories found.";
             }
 
-            // Close the statement
             $stmt->close();
         } else {
             // Error handling for statement preparation
@@ -54,6 +50,5 @@
 </section>
 
 <?php
-  // Fetching all the Footer Data
   require('./includes/footer.inc.php');
 ?>

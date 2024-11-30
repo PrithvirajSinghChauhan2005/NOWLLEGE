@@ -1,5 +1,4 @@
 <?php
-  // Fetching all the Functions and DB Code
   require('./includes/functions.inc.php');
   require('./includes/database.inc.php');
   
@@ -15,6 +14,6 @@
   unset($_SESSION['USER_ID']);
   unset($_SESSION['USER_EMAIL']);
   
-  // Redirected to login page
+
   redirect('./user-login.php');
 ?>

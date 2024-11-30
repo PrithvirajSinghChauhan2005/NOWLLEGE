@@ -1,11 +1,9 @@
 <?php
-  // Fetching all the Navbar Data
   require('./includes/nav.inc.php');
 
   // Checking if the User is logged in already
   if(isset($_SESSION['USER_LOGGED_IN']) && $_SESSION['USER_LOGGED_IN'] == "YES") {
     
-    // Redirected to home page
     redirect('./index.php');
   }
 
@@ -21,13 +19,11 @@
     $loginQuery = " SELECT * FROM user 
                     WHERE user_email = '{$loginEmail}'";
     
-    // Running the Login Query
     $result = mysqli_query($con, $loginQuery);
     
-    // Returns the number of rows from the result retrieved.
     $rows = mysqli_num_rows($result);
 
-    // If query has any result (records) => If any user with the email exists
+    // If any user with the email exists
     if($rows > 0) {
 
       // Fetching the data of particular record as an Associative Array
@@ -51,14 +47,12 @@
           unset($_SESSION['AUTHOR_ID']);
           unset($_SESSION['AUTHOR_EMAIL']);
 
-          // Redirected to home page
           redirect('./index.php');
         }
 
         // If the password fails to match
         else {
 
-          // Redirected to login page along with a message
           alert("Wrong Password");
           redirect('./user-login.php');
         }
@@ -67,7 +61,6 @@
     // If the email is not registered 
     else {
 
-      // Redirected to signup page along with a message
       alert("This Email is not registered. Please Register");
       redirect('./user-login.php');
     }
@@ -82,43 +75,38 @@
     $signupEmail = get_safe_value($_POST['signup-email']);
     $signupPassword = get_safe_value($_POST['signup-password']);
 
-    // Creating new password hash using a strong one-way hashing algorithm => CRYPT_BLOWFISH algorithm
+    // Creating new password hash
     $strg_pass = password_hash($signupPassword,PASSWORD_BCRYPT);
     
     // Check Query to check if the email submitted is present or registered already
     $check_sql = "SELECT user_email FROM user 
                   WHERE user_email = '{$signupEmail}'";
     
-    // Running the Check Query
     $check_result = mysqli_query($con,$check_sql);
     
     // Returns the number of rows from the result retrieved.
     $check_row = mysqli_num_rows($check_result);
     
-    // If query has any result (records) => If any user with the email exists
+    // If any user with the email exists
     if($check_row > 0) {
 
-      // Redirecting to the login page along with a message
       alert("Email Already Exists");
       redirect('./user-login.php');
     }
 
-    // If the query has no records => No user with the email exists (New User)
+    // No user with the email exists (New User)
     else {
 
-      // Signup Query to insert values into the DB
       $signupQuery = "INSERT INTO user 
                       (user_name, user_email, user_password) 
                       VALUES 
                       ('{$signupName}', '{$signupEmail}', '{$strg_pass}')";
 
-      // Running the signup query
       $result = mysqli_query($con, $signupQuery);
 
       //If Query ran successfully
       if($result) {
         
-        // Redirected to login page with a message
         alert("Signup Successful, Please Login");
         redirect('./user-login.php');
       }
@@ -126,7 +114,6 @@
       // If the Query failed
       else {
 
-        // Print the error
         echo "Error: ".mysqli_error($con);
       }
     }
@@ -201,11 +188,9 @@
   </div>
 </div>
 
-<!-- Script for form Validation -->
 <script src="./assets/js/form-validate.js"></script>
 
 <?php
 
-  // Fetching all the Footer Data
   require('./includes/footer.inc.php');
 ?>

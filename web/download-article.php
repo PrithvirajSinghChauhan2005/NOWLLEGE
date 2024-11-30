@@ -1,18 +1,16 @@
 <?php
-  // Fetching all the Functions and DB Code
   require('./includes/functions.inc.php');
   require('./includes/database.inc.php');
   
   // Adding Composer Autoload
   require('./assets/vendor/autoload.php');
 
-  // Creates a session or resumes the current one based on a session identifier. 
+
   session_start();
   
   // If user not logged in
   if(!isset($_SESSION['USER_LOGGED_IN'])) {
 
-    // Redirected to login page along with a message
     alert('Please log in to Download Article');
     redirect('./user-login.php');
   }
@@ -20,14 +18,12 @@
   // If we dont get article_id from URL
   if(!isset($_GET['id'])) {
 
-    // Redirect to home page
     redirect('./index.php');
   }
 
   // If we get article_id from URL and it is null
   elseif ($_GET['id'] == '') {
     
-    // Redirect to home page
     redirect('./index.php');
   }
 
@@ -54,7 +50,6 @@
   // If no article found with respectcive article id
   if($row == 0) {
     
-    // Redirect to home page
     redirect('./index.php');
   }
 
@@ -117,7 +112,7 @@
   $mpdf->showWatermarkText = true;
   
   // Setting Text to use as watermark
-  $mpdf->SetWatermarkText('NewsGrid');
+  $mpdf->SetWatermarkText('Nowllege');
 
   // Specifying the font to use for watermark text
   $mpdf->watermark_font = 'DejaVuSans'; 
@@ -135,7 +130,7 @@
   $mpdf->WriteHTML($html);
   
   // Setting PDF file name
-  $file = 'NewsGrid-NA'.$article_id.'-DT'.time().'.pdf';
+  $file = 'Nowllege-NA'.$article_id.'-DT'.time().'.pdf';
   
   // Sends file inline to the browser
   $mpdf->output($file,'I');

@@ -27,7 +27,7 @@
         <!-- Team Member 1 -->
         <div class="team-member">
             <div class="member-image">
-                <img src="./assets/images/praveen.jpg" alt="Team Member 1">
+                <img src="./assets/images/people/praveen.jpg" alt="Team Member 1">
             </div>
             <div class="member-info">
                 <h2>Praveen bajpai</h2>
@@ -39,7 +39,7 @@
         <!-- Team Member 2 -->
         <div class="team-member">
             <div class="member-image">
-                <img src="./assets/images/prithvi.jpg" alt="Team Member 3">
+                <img src="./assets/images/people/prithvi.jpg" alt="Team Member 3">
             </div>
             <div class="member-info">
                 <h2>Prithvi Raj Singh </h2>
@@ -51,7 +51,7 @@
         <!-- Team Member 3 -->
         <div class="team-member">
             <div class="member-image">
-                <img src="./assets/images/vinit1.png" alt="Team Member 2">
+                <img src="./assets/images/people/vinit1.png" alt="Team Member 2">
             </div>
             <div class="member-info">
                 <h2>Vinit yadav</h2>
@@ -63,7 +63,7 @@
         <!-- Team Member 4 -->
         <div class="team-member">
             <div class="member-image">
-                <img src="./assets/images/vishesh2.png" alt="Team Member 4">
+                <img src="./assets/images/people/vishesh2.png" alt="Team Member 4">
             </div>
             <div class="member-info">
                 <h2>Vishesh D</h2>
@@ -75,7 +75,7 @@
         <!-- Team Member 5 -->
         <div class="team-member">
             <div class="member-image">
-                <img src="./assets/images/pranjali1.png" alt="Team Member 5">
+                <img src="./assets/images/people/pranjali1.png" alt="Team Member 5">
             </div>
             <div class="member-info">
                 <h2>Pranjali </h2>

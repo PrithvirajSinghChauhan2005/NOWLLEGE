@@ -11,7 +11,7 @@ $user = "root";
 $pass = "";
 
 // Default Database name
-$db = "edunation";
+$db = "nowllege-db";
 
 // Creating a connection to the DataBase
 $con = mysqli_connect($host,$user,$pass,$db);

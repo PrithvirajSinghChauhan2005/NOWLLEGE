@@ -1,11 +1,9 @@
 <?php
-  // Fetching all the Navbar Data
   require('./includes/nav.inc.php');
   
   // Checking if the Author is logged in already
   if(isset($_SESSION['AUTHOR_LOGGED_IN']) && $_SESSION['AUTHOR_LOGGED_IN'] == "YES") {
     
-    // Redirected to author dashboard
     redirect('./author/index.php');
   }
 
@@ -20,14 +18,14 @@
     // Login Query to check if the email submitted is present or registered
     $loginQuery = "SELECT * FROM author WHERE author_email = ?";
     $stmt = mysqli_prepare($con, $loginQuery);
-    mysqli_stmt_bind_param($stmt, "s", $loginEmail);  // "s" is for string type
+    mysqli_stmt_bind_param($stmt, "s", $loginEmail);
     mysqli_stmt_execute($stmt);
     $result = mysqli_stmt_get_result($stmt);
     
     // Returns the number of rows from the result retrieved.
     $rows = mysqli_num_rows($result);
     
-    // If query has any result (records) => If any user with the email exists
+    // If any user with the email exists
     if($rows > 0) {
       
       // Fetching the data of particular record as an Associative Array
@@ -51,7 +49,6 @@
           unset($_SESSION['USER_ID']);
           unset($_SESSION['USER_EMAIL']);
           
-          // Redirected to author dashboard
           redirect('./author/index.php');
         }
 
@@ -262,6 +259,5 @@
 
 <?php
 
-  // Fetching all the Footer Data
   require('./includes/footer.inc.php');
 ?>

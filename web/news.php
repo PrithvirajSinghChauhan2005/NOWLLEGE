@@ -1,5 +1,4 @@
 <?php
-  // Fetching all the Navbar Data
   require('./includes/nav.inc.php');
   
   $cat_id = "";
@@ -14,14 +13,12 @@
   // If we get article_id from URL and it is null
   elseif ($_GET['id'] == '' && $_GET['id'] == null) {
     
-    // Redirect to home page
     redirect('./index.php');
   }
 
   // If we dont get article_id from URL
   else {
     
-    // Redirect to home page
     redirect('index.php');
   }
 
@@ -47,7 +44,7 @@
     // Running the Bookmark Query
     $bookmarkResult = mysqli_query($con, $bookmarkQuery);
     
-    // If query has any result (records) => User has the article bookmarked
+    // User has the article bookmarked
     if(mysqli_num_rows($bookmarkResult) > 0) {
       
       // Updating the variable to true to have bookmarked icon on article card
@@ -61,7 +58,6 @@
   // If the Query failed
   if(!$result) {
     
-    // Redirected to home page
     redirect('./index.php');
   }
 
@@ -191,7 +187,7 @@
             // Returns the number of rows from the result retrieved.
             $row = mysqli_num_rows($trendingResult);
 
-            // If query has any result (records) => If any trending articles are present
+            // If any trending articles are present
             if($row > 0) {
               
               // Fetching the data of particular record as an Associative Array
@@ -288,6 +284,5 @@
 
 <?php
 
-  // Fetching all the Footer Data
   require('./includes/footer.inc.php');
 ?>

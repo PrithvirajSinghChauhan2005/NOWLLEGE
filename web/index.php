@@ -1,8 +1,6 @@
 <?php
-  // Fetching all the Navbar Data
   require('./includes/nav.inc.php');
 
-  // Fetching all the Slider Data
   require('./includes/slider.inc.php');
 ?>
 
@@ -26,7 +24,7 @@
         // Row stores the no of rows in the return data from Query
         $row = mysqli_num_rows($result);
         
-        // If query has any result (records) => If any articles are present
+        // If any articles are present
         if($row > 0) {
           
           // Fetching the data of particular record as an Associative Array
@@ -88,7 +86,7 @@
               // Returns the number of rows from the result retrieved.
               $bookmarkRow = mysqli_num_rows($bookmarkResult);
               
-              // If query has any result (records) => User has the article bookmarked
+              // User has the article bookmarked
               if($bookmarkRow > 0) {
                 
                 // Updating the variable to true to have bookmarked icon on article card

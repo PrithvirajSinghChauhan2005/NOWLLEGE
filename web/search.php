@@ -1,11 +1,10 @@
 <?php
-  // Fetching all the Navbar Data
   require('./includes/nav.inc.php');
 ?>
 
 <!-- Container to store Search filters -->
 <section class="search-box">
-  <div class="container p-2">
+  <div class="container p-2 search-box-container">
     <form method="GET" class="search-article">
       <div class="box-container d-flex">
         <table class=".search-table">
@@ -24,16 +23,15 @@
             <option value="">Select Any Category</option>
             <?php
 
-                // Category Query to fetch all the categories from DB in lexicographic order
+                // Category Query to fetch all the categories from DB
                 $categoryQuery = "SELECT * FROM category ORDER BY category_name ASC";
                 
                 // Running the Category query
                 $result = mysqli_query($con,$categoryQuery);
 
-                // Returns the number of rows from the result retrieved.
                 $row = mysqli_num_rows($result);
                 
-                // If query has any result (records) => If there are categories
+                // If there are categories
                 if($row > 0) {
                   
                   // Fetching the data of particular record as an Associative Array
@@ -90,14 +88,12 @@
         // Check if we get page no from URL
         if(isset($_GET['page'])) {
 
-          // Update the page
           $page = $_GET['page'];
         }
 
         // If page no is not fetched from URL => default to first page
         else {
 
-          // Update to 1 as first page
           $page = 1;
         }
 
@@ -230,10 +226,10 @@
           $searchQuery .= ' AND article_date <= "'.$to_date.'"';
         }
 
-        // Search Query is updated with the article active condition => all articles with above search filters
+        // all articles with above search filters
         $searchQuery .= " AND article_active = 1 ";
 
-        // Search Query1 is updated with lexicographic order condition and LIMIT condition => limit no of articles with above search filters
+        // Search Query1 is updated, limit no of articles with above search filters
         $searchQuery1 = $searchQuery." ORDER BY article_title LIMIT {$offset}, {$limit}";
 
         // Running the Search Query
@@ -242,7 +238,7 @@
         // Returns the number of rows from the result retrieved.
         $row = mysqli_num_rows($searchResult);
     
-        // If query has any result (records) => If any articles are present with the above filters
+        // => If any articles are present with the above filters
         if($row  > 0) {
 
           // Fetching the data of particular record as an Associative Array
@@ -313,7 +309,7 @@
               // Returns the number of rows from the result retrieved.
               $bookmarkRow = mysqli_num_rows($bookmarkResult);
               
-              // If query has any result (records) => User has the article bookmarked
+              // User has the article bookmarked
               if($bookmarkRow > 0) {
 
                 // Updating the variable to true to have bookmarked icon on article card
@@ -332,7 +328,7 @@
           }
         }
 
-        // If query has no records => If no articles are present with the above filters
+        // If no articles are present with the above filters
         else {
           echo"</div>";
 
@@ -399,6 +395,5 @@
 
 <?php
 
-  // Fetching all the Footer Data
   require('./includes/footer.inc.php');
 ?>

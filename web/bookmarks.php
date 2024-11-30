@@ -1,11 +1,9 @@
 <?php
-  // Fetching all the Navbar Data
   require('./includes/nav.inc.php');
   
   // If user not logged in
   if(!isset($_SESSION['USER_LOGGED_IN'])) {
     
-    // Redirected to login page along with a message
     alert("Please Login to See Your Bookmarks");
     redirect('./user-login.php');
   }
@@ -29,14 +27,14 @@
           $page = $_GET['page'];
         }
 
-        // If page no is not fetched from URL => default to first page
+        // If page no is not fetched from URL
         else {
          
           // Update to 1 as first page
           $page = 1;
         }
         
-        // Calculate the offset value for SQL Query => pagination
+        // Calculate the offset value for SQL Query
         $offset = ($page - 1) * $limit;
         
         // Article Query to fetch all bookmarked articles of the user
@@ -50,15 +48,13 @@
 
         
         // Query to Get all the Details required for the Article Card
-        // We get details from ARTICLE & CATEGORY Table in ASC order
         
-        // Running the Article Query
         $result = mysqli_query($con,$articleQuery);
 
         // Returns the number of rows from the result retrieved.
         $row = mysqli_num_rows($result);
         
-        // If query has any result (records) => If any bookmarked article is present
+        // If any bookmarked article is present
         if($row > 0) {
           
           // Fetching the data of particular record as an Associative Array
@@ -187,6 +183,5 @@
 
 <?php
 
-  // Fetching all the Footer Data
   require('./includes/footer.inc.php');
 ?>

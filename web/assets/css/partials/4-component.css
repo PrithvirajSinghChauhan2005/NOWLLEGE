@@ -39,11 +39,8 @@
 }
 
 .category-list {
-  background-color: rgba(255, 0, 0, 0); 
-  background-image: url(pexels-icon0-479453.jpg);
-  background-repeat: no-repeat;           /* Prevent the image from repeating */
-  background-size: cover;                 /* Scale the image to cover the entire page */
-  background-position: center;            /* Center the image on the page */
+  background-color: rgba(255, 0, 0, 0);
+  background-image: url(imageonline-co-noisedimage.jpg);
 
 }
 .navbar {

@@ -33,8 +33,7 @@ h1 {
 /* NAVBAR DEKSTOP */
 .navbar {
   transition: all 0.3s ease; /* Smooth transitions */
-  background: rgba(0, 0, 0, 0.2); /* Transparent white background */
-  backdrop-filter: blur(10px); /* Blur effect for the glassy look */
+  background: rgb(27, 27, 27);
   box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* Optional: Shadow for depth */
   font-family: var(--ff-nunito);
   position: sticky;
@@ -59,7 +58,7 @@ h1 {
 }
 .tag {
   display: inline-block; /* Ensures proper padding behavior */
-  margin-top: 20px; /* Moves the tag downward */
+  margin-top: 35px; /* Moves the tag downward */
   padding: 10px 15px; /* Adds internal spacing (top-bottom, left-right) */
   background-color: #6a1b9a; /* Purple background */
   color: #fff; /* White text */
@@ -107,7 +106,7 @@ h1 {
   margin: 0 5px;
 }
 .navbar ul li a {
-  color:rgb(0, 0, 0);
+  color:rgb(255, 255, 255);
   line-height: 70px;
   text-decoration: none;
   border-radius: var(--border-radius);
@@ -144,8 +143,7 @@ h1 {
   opacity: 1;
   visibility: hidden;
   transition: top 0.1s;
-  background: rgba(255, 255, 255, 0.2); /* Transparent white background */
-  backdrop-filter: blur(200px); /* Blur effect for the glassy look */
+  background: rgb(155, 155, 155); /* Transparent white background */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Shadow for depth */
 }
 /*categaory ka dropdown menu ka formatting end*/
@@ -190,7 +188,6 @@ h1 {
   height: 450px;
   margin-top: -75px; 
   box-shadow: 0 2px 50px rgb(0, 0, 0);
-  background-image: url(pexels-icon0-479453.jpg);
 }
 
 .img-slider .slide {
@@ -277,7 +274,7 @@ h1 {
   flex-flow: row wrap;
   padding: 30px 55px;
   color: var(--light-color);
-  background-color: #000000;
+  background-color: rgb(27, 27, 27);
 }
 
 .footer > * {
@@ -372,6 +369,14 @@ h1 {
 }
 
 /* SEARCH BAR */
+.search-box {
+  background-image: url('../css/partials/imageonline-co-noisedimage.jpg'); /* Specify the path to your image */
+  width: 100%;
+}
+.filters {
+  background-image: url('../css/partials/imageonline-co-noisedimage.jpg'); /* Specify the path to your image */
+  width: 100%;
+}
 
 .box-container {
   margin: auto ;
@@ -411,7 +416,7 @@ h1 {
   margin-top: 10px;
   border-radius: var(--border-radius);
   font-family: var(--ff-nunito);
-   background-color: #fc0000; 
+   background-color: #ffffff; 
 }
 
 .filters div {
@@ -659,6 +664,7 @@ form button {
   padding: 1rem;
   border-radius: 20px;
   background-color: white;
+  background-image: url(../css/partials/imageonline-co-noisedimage.jpg);
   display: flex;
   flex-direction: column;
   align-items: center;
