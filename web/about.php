@@ -24,6 +24,18 @@
     </header>
 
     <section class="team-container">
+        <!-- Team Member 2 -->
+        <div class="team-member">
+            <div class="member-image">
+                <img src="./assets/images/people/prithvi.jpg" alt="Team Member 3">
+            </div>
+            <div class="member-info">
+                <h2>Prithvi Raj Singh </h2>
+                <p>UI/UX Designer</p>
+                <a href="https://linkedin.com/in/emilybrown" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </div>
+
         <!-- Team Member 1 -->
         <div class="team-member">
             <div class="member-image">
@@ -36,18 +48,6 @@
             </div>
         </div>
 
-        <!-- Team Member 2 -->
-        <div class="team-member">
-            <div class="member-image">
-                <img src="./assets/images/people/prithvi.jpg" alt="Team Member 3">
-            </div>
-            <div class="member-info">
-                <h2>Prithvi Raj Singh </h2>
-                <p>frontend Developer</p>
-                <a href="https://linkedin.com/in/emilybrown" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            </div>
-        </div>
-
         <!-- Team Member 3 -->
         <div class="team-member">
             <div class="member-image">
@@ -55,7 +55,7 @@
             </div>
             <div class="member-info">
                 <h2>Vinit yadav</h2>
-                <p>Backend developer</p>
+                <p>Database Management</p>
                 <a href="https://linkedin.com/in/janesmith" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
             </div>
         </div>
