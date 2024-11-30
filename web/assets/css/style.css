@@ -58,9 +58,8 @@ h1 {
 }
 .tag {
   display: inline-block; /* Ensures proper padding behavior */
-  margin-top: 35px; /* Moves the tag downward */
+  margin-top: 45px; /* Moves the tag downward */
   padding: 10px 15px; /* Adds internal spacing (top-bottom, left-right) */
-  background-color: #6a1b9a; /* Purple background */
   color: #fff; /* White text */
   border-radius: 5px; /* Optional: Rounded corners */
   font-size: 14px; /* Adjust font size for better readability */
@@ -70,9 +69,8 @@ h1 {
 
 /* Hover effect */
 .tag:hover {
-  background-color: #4a148c; /* Darker purple on hover */
   color: #fff; /* Optional: Ensure text remains white on hover */
-  transform: translateY(-3px); /* Adds a subtle lift effect */
+  transform: translateY(-4px); /* Adds a subtle lift effect */
   transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
 }
 
@@ -131,7 +129,9 @@ h1 {
   color: rgb(0, 0, 0);
 }
 
-
+.box-box{
+  background-image: url(../css/partials/imageonline-co-noisedimage.jpg);
+}
 
 
 
@@ -234,7 +234,7 @@ h1 {
   font-size: var(--ts-md);
   font-weight:bold  ;
   font-family: var(--ff-nunito);
-  color: #000000;
+  color: #ffffff;
 }
 
 .img-slider .navigation {

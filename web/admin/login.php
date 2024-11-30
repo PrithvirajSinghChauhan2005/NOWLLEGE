@@ -8,7 +8,7 @@
   if(isset($_SESSION['ADMIN_LOGGED_IN']) && $_SESSION['ADMIN_LOGGED_IN'] == "YES") {
 
     // Redirected to author dashboard
-    redirect('./author/index.php');
+    redirect('./index.php');
   }
 
   // Whenever login button is pressed
@@ -101,7 +101,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1 class="text-center">NewsGrid <small>Admin Login</small></h1>
+          <h1 class="text-center">Nowllege <small>Admin Login</small></h1>
         </div>
       </div>
     </div>

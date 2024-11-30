@@ -147,6 +147,8 @@
         <ul>
           <li><a href="./user-login.php">Reader</a></li>
           <li><a href="./author-login.php">Author</a></li>
+          <li><a href="../admin/login.php">Admin</a></li>
+          
         </ul>
       </li>
       <?php } else { ?>

@@ -1,5 +1,8 @@
 <footer id="footer">
-  <p>All Rights Reserved by &copy; Nowllege</p>
+<div class="footer-bottom">
+    <p>All Rights Reserved by &copy; Nowllege <?php echo date("Y")?></p>
+  </div>
+</footer>
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

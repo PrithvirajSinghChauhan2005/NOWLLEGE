@@ -188,7 +188,8 @@
 ?>
 
 
-<div class="container p-2">
+<section class="box-box">
+<div class="container p-2 container-box">
   <!-- Container to store two form divs -->
   <div class="forms-container">
     <!-- Left div for login -->
@@ -253,6 +254,8 @@
     </div>
   </div>
 </div>
+</section>
+
 
 <!-- Script for form Validation -->
 <script src="./assets/js/form-validate.js"></script>

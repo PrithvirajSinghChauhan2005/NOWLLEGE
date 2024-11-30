@@ -107,12 +107,7 @@ body {
 }
  
 #main.login-main {
-  background-image: url(../partials/imageonline-co-noisedimage.jpg); /* Path to your saved image */
-  background-size: cover; /* Makes the image cover the entire section */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-  width: 100%; /* Optional: Ensures the section spans the width of the page */
-  height: 100vh; /* Optional: Makes the section take up full viewport height */
+  background-image: url(../partials/imageonline-co-noisedimage.jpg);
 }
 
 #login label {
