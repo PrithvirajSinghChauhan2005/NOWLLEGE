@@ -27,23 +27,23 @@
         <!-- Team Member 1 -->
         <div class="team-member">
             <div class="member-image">
-                <img src="./assets/images/people/prithvi.jpg" alt="Team Member 3">
+                <img src="./assets/images/people/prithvi.jpg" alt="Team Member 1">
             </div>
             <div class="member-info">
                 <h2>Prithvi Raj Singh </h2>
                 <p>UI/UX Designer</p>
-                <a href="https://linkedin.com/in/emilybrown" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://www.linkedin.com/in/prithviraj-singh-chauhan-b2a5a5276/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
             </div>
         </div>
 
         <!-- Team Member 2 -->
         <div class="team-member">
             <div class="member-image">
-                <img src="./assets/images/people/praveen.jpg" alt="Team Member 1">
+                <img src="./assets/images/people/praveen.jpg" alt="Team Member 2">
             </div>
             <div class="member-info">
                 <h2>Praveen bajpai</h2>
-                <p>Frontend developer</p>
+                <p>Frontend Developer</p>
                 <a href="https://in.linkedin.com/in/praveen-bajpai-302bb0270" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
             </div>
         </div>
@@ -51,7 +51,7 @@
         <!-- Team Member 3 -->
         <div class="team-member">
             <div class="member-image">
-                <img src="./assets/images/people/vinit1.png" alt="Team Member 2">
+                <img src="./assets/images/people/vinit1.png" alt="Team Member 3">
             </div>
             <div class="member-info">
                 <h2>Vinit yadav</h2>
@@ -80,7 +80,7 @@
             <div class="member-info">
                 <h2>Pranjali </h2>
                 <p>Documentation</p>
-                <a href="https://linkedin.com/in/sophiagreen" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://www.linkedin.com/in/pranjali-upadhyay-a981a0304/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
             </div>
         </div>
     </section>
