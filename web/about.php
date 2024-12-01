@@ -30,9 +30,9 @@
                 <img src="./assets/images/people/prithvi.jpg" alt="Team Member 1">
             </div>
             <div class="member-info">
-                <h2>Prithvi Raj Singh </h2>
+                <h2>Prithvi Raj Singh</h2>
                 <p>UI/UX Designer</p>
-                <a href="https://www.linkedin.com/in/prithviraj-singh-chauhan-b2a5a5276/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://www.linkedin.com/in/prithviraj-singh-chauhan-4355a733b/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
             </div>
         </div>
 
@@ -42,7 +42,7 @@
                 <img src="./assets/images/people/praveen.jpg" alt="Team Member 2">
             </div>
             <div class="member-info">
-                <h2>Praveen bajpai</h2>
+                <h2>Praveen Bajpai</h2>
                 <p>Frontend Developer</p>
                 <a href="https://in.linkedin.com/in/praveen-bajpai-302bb0270" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
             </div>
@@ -54,7 +54,7 @@
                 <img src="./assets/images/people/vinit1.png" alt="Team Member 3">
             </div>
             <div class="member-info">
-                <h2>Vinit yadav</h2>
+                <h2>Vinit Yadav</h2>
                 <p>Database Management</p>
                 <a href="https://www.linkedin.com/in/vinit-yadav-a3199831a" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
             </div>
@@ -66,7 +66,7 @@
                 <img src="./assets/images/people/vishesh.jpg" alt="Team Member 4">
             </div>
             <div class="member-info">
-                <h2>Vishesh D</h2>
+                <h2>Vishesh Devaguptapu</h2>
                 <p>Backend Developer</p>
                 <a href="https://www.linkedin.com/in/vishesh-devaguptapu-110ba1324/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
             </div>
@@ -78,7 +78,7 @@
                 <img src="./assets/images/people/pranjali1.png" alt="Team Member 5">
             </div>
             <div class="member-info">
-                <h2>Pranjali </h2>
+                <h2>Pranjali Upadhyay</h2>
                 <p>Documentation</p>
                 <a href="https://www.linkedin.com/in/pranjali-upadhyay-a981a0304/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
             </div>
